@@ -46,7 +46,7 @@
             <a href="#Analytics" class="button">Analytics</a>
         </button>
         <div onclick="window.location.href='ticketpage.html'">
-                <button class="b2-1" >
+                <button class="b3" >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_408_455)">
                         <path d="M10 3.3335V4.66683" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,7 +90,7 @@
                 </svg>
                 <a href="#Hardware" class="button">Hardware</a> 
             </button>
-            <button class="b3" onclick="window.location.href='team-page.html'">
+            <button class="b2-1" onclick="window.location.href='team-page.html'">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.99967 6.33333C6.47243 6.33333 7.66634 5.13943 7.66634 3.66667C7.66634 2.19391 6.47243 1 4.99967 1C3.52692 1 2.33301 2.19391 2.33301 3.66667C2.33301 5.13943 3.52692 6.33333 4.99967 6.33333Z"
@@ -148,7 +148,7 @@
                 <div class="a1">
                     <p>Tickets</p>
                 </div>
-                <button class="ct" id="myBtn">
+                <button class="ct" id="myBtn" onclick="openmodal()">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8 14.75C11.7279 14.75 14.75 11.7279 14.75 8C14.75 4.27208 11.7279 1.25 8 1.25C4.27208 1.25 1.25 4.27208 1.25 8C1.25 11.7279 4.27208 14.75 8 14.75Z"
@@ -162,11 +162,11 @@
                 </button>
 
                 <!-- this is model -->
-                <div class="bg-blur-s"  id="myModal">
-                    <div class="main-form">
+                <div id="blur"></div>
+                    <div id="mymodal">
                         <!-- Modal content -->
                         <div class="modal-content">
-                          <span class="close">&times;</span>
+                          <span id="close" onclick="closemodal()">&times;</span>
 
                             <p class="create-ticket">
                         Create Ticket
@@ -304,40 +304,67 @@
                   
                   </div>
                   <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
-                    
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
-                    
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-                    
-                    // When the user clicks the button, open the modal 
-                    btn.onclick = function() {
-                      modal.style.display = "block";
+                    function openmodal() {
+                         var modal=document.getElementById("mymodal");
+                         var btn=document.getElementById("mybtn");
+                         var blur=document.getElementById("blur");
+                         modal.style.display="block"
+                         blur.style.display="block"
+                     }
+                     function closemodal(){
+                         var modal=document.getElementById("mymodal");
+                         var blur=document.getElementById("blur");
+                         var close=document.getElementById("close");
+                         modal.style.display="none"
+                         blur.style.display="none"
+                         
+                     }
+
+                    //  delte model function
+                    function openmodal1() {
+                         var modal=document.getElementById("delmodel");
+                         var btn=document.getElementById("mybtn2");
+                         var blur=document.getElementById("blur1");
+                         delmodel.style.display="block"
+                         blur1.style.display="block"
+                     }
+                     function closemodal1() {
+                         var modal=document.getElementById("delmodel");
+                         var blur=document.getElementById("blur1");
+                         var close=document.getElementById("close1");
+                         modal.style.display="none"
+                         blur.style.display="none"
+                         
+                     }
+
+
+                    //  This is team page add member button model 
+                    function openmodal2() {
+                        var modal=document.getElementById("addmember1");
+                        var btn=document.getElementById("mybtn3");
+                        var blur=document.getElementById("blur2");
+                        modal.style.display="block"
+                        blur.style.display="block"
                     }
-                    
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                      modal.style.display = "none";
+                    function closemodal2(){
+                        var modal=document.getElementById("addmember1");
+                        var blur=document.getElementById("blur2");
+                        var close=document.getElementById("close2");
+                        modal.style.display="none"
+                        blur.style.display="none"
+                        
                     }
+                     </script>
                     
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-                      }
-                    }
-                    </script>
-                    
-                </div>
+                
 
 
                 <div class="list-all" > 
                     <div class="all-1">
-                      <button class="add-m-btn">Add member</button>
-                        <div class="search-foam">
+                      <button class="add-m-btn" id="mybtn3" onclick="openmodal2()">Add member</button>
+                      <div><button class="con-d" id="myBtn2" onclick="openmodal1()">Confirm Delete</button></div>
+                      <div><button class="cen-b">Cancel</button></div>
+                      <div class="search-foam">
                             <form>
                                 <input type="text" class="search-foam-1" name="search" placeholder="Search by RMA, Issue or Status">
                                 </form>
@@ -688,7 +715,67 @@
                             </div>
 
                         </div>
+                        <div id="blur2"></div>
+                        <div id="addmember1">
+                          <div class="addmember-m-c">
+                            <span id="close2" onclick="closemodal2()">&times;</span>
+                            <p class="add-m-1">Add Member</p>
+                             <hr class="line"/>
+                             <form action="#">
+                              <label for="fname" class="form-label">First Name</label>
+                              <br>
+                              <input type="text" class="form-input" name="fname" id="fname" placeholder="Enter first name">
+                            </form>
+                            <form action="#">
+                              <label for="fname" class="form-label">Last name</label>
+                              <br>
+                              <input type="text" class="form-input" name="lname" id="lname" placeholder="Enter Last name">
+                            </form>
+                            <form action="#">
+                              <label for="fname" class="form-label" >Last name</label>
+                              <br>
+                              <input type="email" class="form-input" name="email" id="email" placeholder="Enter your email">
+                            </form>
+                            <form action="#">
+                              <label for="fname" class="form-label">Role</label>
+                              <br>
+                              <select id="role" name="role" class="form-input">
+                                <option value="Admin">Admin</option>
+                                <option value="Editor">Editor</option>
+                                <option value="fiat">Advicer</option>
+                              </select>
+                            </form>
+                            <form action="#">
+                              <label for="fname" class="form-label" class="form-label">Date created</label>
+                              <br>
+                              <input type="date" class="form-input" name="email" id="email" placeholder="Enter your email">
+                            </form>
+                            <hr class="line"/>
+                            <button class="add-m-btn-2">Add Member</button>
+                            <button class="cen-btn-2">Cancel</button>
+
+                          </div>
+                        </div>
+                        <div id="blur1"></div>
+                        <div id="delmodel" onclick="openmodal1()">
+                          <div class="del-form">
+                            <div class="form-cont">
+                              <span id="close1" onclick="closemodal1()">&times;</span>
+                            <div class="del-icon"><img src="./del-icon.png"/></div>
+                            <p class="del-t-m">Deleteing team member(s)?</p>
+                            <p class="para-d">You are about to delete member(s) from the team. This action is irreversible and can’t be undone. Do you wish to proceed?</p>
+                            <div class="btn-7"><button class="cen-b-1">Cancel</button>
+                              <button class="con-d">Confirm Delete</button>
+                            
+                            </div>
+                            </div>
+                            
+                            
+                            </div>
+                          </div>
+                        </div>
                     </div>
+                  </div>
                     
 
 

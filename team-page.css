@@ -340,7 +340,7 @@ max-width: 228px;
   .all-1{
     width: 100%;
     color: #000000;
-    justify-content: space-between;
+    justify-content: flex-start;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
@@ -396,6 +396,8 @@ max-width: 228px;
   .search-foam-1{
     width: 310px;
     height: 48px;
+    display: flex;
+    justify-content: flex-end;
     
     /* White */
     
@@ -422,7 +424,7 @@ justify-content: center;
 align-items: flex-start;
 padding: 8px;
 gap: 24px;
-
+height: 100vh;
 width: 100%;
 max-width:1124px;
 
@@ -1096,7 +1098,8 @@ padding: 8px 16px;
   
   
   
-  .bg-blur-s {
+  #blur{
+    display: none;
     position: fixed;
     max-width: 100%;
     max-height: 100%;
@@ -1105,6 +1108,25 @@ padding: 8px 16px;
     backdrop-filter: blur(3px);
     inset: 0;
   }
+
+  #mymodal{
+    display: none;
+    height: 100%;
+    width: 100%;
+    max-height: 970px;
+    max-width: 756px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 2;
+    margin: auto;
+    inset: 0;
+  }
+
+  #close{
+    font-size: 20px;
+  }
+  
   
   
   .main-form {
@@ -1299,3 +1321,273 @@ border-radius: 6px;
 color:white;
 text-align: center;
   }
+
+
+  .con-d{
+
+    width: 131px;
+height: 45px;
+
+/* Black */
+
+background: white;
+border-radius: 6px;
+color: #E11D48;;
+border: 2px solid #E11D48;
+text-align: center;
+cursor: pointer;
+  }
+
+  .con-d:hover{
+    background-color: #E11D48;
+    color:white;
+  }
+
+  .cen-b{
+
+    width: 131px;
+height: 45px;
+
+background: white;
+color: black;;
+text-align: center;
+border: none;
+background-color: inherit;
+cursor: pointer;
+  display: inline-block;
+}
+
+.cen-b:hover{
+  background-color: #F5F5F5;
+
+}
+
+
+.del-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 2;
+    margin: auto;
+    inset: 0;
+    max-width: 481px;
+max-height: 249px;
+}
+  .del-icon{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 24px;
+   */
+  }
+
+  .del-t-m{
+    text-align: center;
+    font-weight: 600;
+font-size: 18px;
+line-height: 100%;
+font-feature-settings: 'liga' off;
+
+
+  }
+
+  .para-d{
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+color: #525252;
+text-align: center;
+  }
+
+  .btn-7{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    
+    
+  }
+  
+  .cen-b-1{
+    
+
+    width: 83px;
+    height: 42px;
+    
+  
+  /* Black */
+  
+  background: white;
+  border-radius: 6px;
+  color:black;
+  border: 2px solid black;
+  text-align: center;
+  cursor: pointer;
+    }
+  
+    .cen-b-1:hover{
+      background-color:black;
+      color:white;
+    }
+
+    #close1{
+  
+      font-size: 20px;
+
+    }
+  
+    #delmodel{
+      display: none;
+      height: 100%;
+      width: 100%;
+      max-width: 481px;
+      max-height: 249px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      position: fixed;
+      z-index: 2;
+      margin: auto;
+      inset: 0;
+    }
+
+
+    #blur1{
+      display: none;
+      position: fixed;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(3px);
+      inset: 0;
+    }
+
+
+    #blur2{
+      display: none;
+      position: fixed;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(3px);
+      inset: 0;
+    }
+  
+
+    .form-cont{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+
+
+    
+
+
+    #addmember1{
+      display:block;
+      height: 100vh;
+
+      width: 100%;
+      max-width: 384px;
+      /* max-height: 1024px; */
+      border-radius: 12px;
+      background-color: #ffffff;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      
+    }
+
+    .addmember-m-c{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-left: 24px;
+      margin-top: 70px;
+      gap:24px;
+
+    }
+
+    .add-m-1{
+      font-weight: 800;
+font-size: 20px;
+line-height: 100%;
+/* identical to box height, or 20px */
+
+letter-spacing: -0.03em;
+
+/* Black */
+
+color: #18181B;
+
+
+    }
+    .role-1{
+      width: 336px;
+height: 46px;
+
+/* White */
+
+background: #FFFFFF;
+/* Zinc 200 */
+
+border: 1px solid #E4E4E7;
+border-radius: 6px;
+
+    }
+
+    .add-m-btn-2{
+      align-items: center;
+padding: 12px 24px;
+gap: 8px;
+
+width: 336px;
+height: 45px;
+
+/* Black */
+
+background: #18181B;
+border-radius: 6px;
+color:white;
+cursor: pointer;
+    }
+
+
+    .cen-btn-2{
+
+      border: 1px solid #A1A1AA;
+border-radius: 6px;
+width: 336px;
+height: 45px;
+background-color: white;
+cursor: pointer;
+    }
+
+    .cen-btn-2:hover{
+      background-color:#A1A1AA;
+      color:black;
+    }
+
+    #close2{
+      font-size: 40px;
+     
+    }
+
+
+    #addmember1{
+      display: none;
+      height: 100%;
+      width: 100%;
+      }

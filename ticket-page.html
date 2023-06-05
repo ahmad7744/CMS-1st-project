@@ -80,7 +80,7 @@
                 </svg>
                 <a href="#Customers" class="button">Customers</a>
             </button>
-            <button class="b3">
+            <button class="b3" >
                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M6.33333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V10.3333C1 11.8061 2.19391 13 3.66667 13H6.33333C7.80609 13 9 11.8061 9 10.3333V3.66667C9 2.19391 7.80609 1 6.33333 1Z"
@@ -90,7 +90,7 @@
                 </svg>
                 <a href="#Hardware" class="button">Hardware</a> 
             </button>
-            <button class="b3">
+            <button class="b3" onclick="window.location.href='team-page.html'">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.99967 6.33333C6.47243 6.33333 7.66634 5.13943 7.66634 3.66667C7.66634 2.19391 6.47243 1 4.99967 1C3.52692 1 2.33301 2.19391 2.33301 3.66667C2.33301 5.13943 3.52692 6.33333 4.99967 6.33333Z"
@@ -148,7 +148,7 @@
                 <div class="a1">
                     <p>Tickets</p>
                 </div>
-                <button class="ct" id="myBtn">
+                <button class="ct" id="myBtn" onclick="openmodal()">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8 14.75C11.7279 14.75 14.75 11.7279 14.75 8C14.75 4.27208 11.7279 1.25 8 1.25C4.27208 1.25 1.25 4.27208 1.25 8C1.25 11.7279 4.27208 14.75 8 14.75Z"
@@ -162,11 +162,11 @@
                 </button>
 
                 <!-- this is model -->
-                <div class="bg-blur-s"  id="myModal">
-                    <div class="main-form">
+                <div id="blur"></div>
+                    <div id="mymodal">
                         <!-- Modal content -->
                         <div class="modal-content">
-                          <span class="close">&times;</span>
+                          <span id="close" onclick="closemodal()">&times;</span>
 
                             <p class="create-ticket">
                         Create Ticket
@@ -304,34 +304,24 @@
                   
                   </div>
                   <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
+                    function openmodal() {
+                         var modal=document.getElementById("mymodal");
+                         var btn=document.getElementById("mybtn");
+                         var blur=document.getElementById("blur");
+                         modal.style.display="block"
+                         blur.style.display="block"
+                     }
+                     function closemodal(){
+                         var modal=document.getElementById("mymodal");
+                         var blur=document.getElementById("blur");
+                         var close=document.getElementById("close");
+                         modal.style.display="none"
+                         blur.style.display="none"
+                         
+                     }
+                     </script>
                     
-                    // Get the button that opens the modal
-                    var btn = document.getElementById("myBtn");
-                    
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-                    
-                    // When the user clicks the button, open the modal 
-                    btn.onclick = function() {
-                      modal.style.display = "block";
-                    }
-                    
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function() {
-                      modal.style.display = "none";
-                    }
-                    
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-                      }
-                    }
-                    </script>
-                    
-                </div>
+                
 
 
                 <div class="list-all" > 
@@ -690,8 +680,6 @@
                     
 
 
-                    <div class="btn-all">
-                      <div class="btn-1"><p>1122</p></div>
                     </div>
 
                     

@@ -19,6 +19,8 @@
 .cont1 {
   width: 100%;
   max-width: 260px;
+  position: fixed;
+  height: 100vh;
   background: #18181B;
   /* display: flex;
     align-items: center;
@@ -29,6 +31,7 @@
 
   width: 100%;
   /* background-color: red; */
+  margin-left: 262px
 }
 
 

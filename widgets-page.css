@@ -425,7 +425,7 @@ max-width: 228px;
 }
 
   .maincen{
-    width: 100%;
+    /* width: 100%; */
     display: flex ;
     justify-content: space-between;
     background-color: #FAFAFA;
@@ -466,7 +466,7 @@ border-radius: 12px;
   .table-2{
     padding: 16px;
     padding-right: 24px;
-  text-align: left;
+  text-align: justify;
   border-bottom: 1px solid #DDD;
   }
 
@@ -1372,6 +1372,7 @@ border:1px solid #E4E4E7;
 border-radius: 12px;
 width: 548px;
 height: 788px;
+padding: 24px;
 
   }
   
@@ -1435,5 +1436,20 @@ background: #18181B;
 border-radius: 6px;
 color:white;
 float: right;
+
+  }
+
+  .left-box-table{
+width: 100%;    
+max-width: 500px;
+/* height: 696px; */
+
+/* White */
+
+background: #FFFFFF;
+/* Zinc 200 */
+
+border: 1px solid #E4E4E7;
+border-radius: 8px;
 
   }

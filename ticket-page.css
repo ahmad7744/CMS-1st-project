@@ -355,12 +355,12 @@ max-width: 228px;
   .all-1{
     width: 100%;
     color: #000000;
-    justify-content: flex-start;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
     align-items: flex-start;
-    padding: 20px;
+    padding: 28px;
     gap: 32px;
     background-color: #FAFAFA;
 
@@ -439,7 +439,7 @@ padding: 8px;
 gap: 24px;
 
 width: 100%;
-max-width:1124px;
+/* max-width:1124px; */
 
 /* height: 709px; */
 
@@ -450,12 +450,18 @@ background:white;
 
 border: 1px solid #E4E4E7;
 border-radius: 12px;
+margin-right: 28px;
+margin-left: 28px;
 
   }
   .table-1 {
     border-collapse: collapse;
   width: 100%;
 
+  }
+
+  .table-cont{
+    width: 100%;
   }
 
   .table-2{
